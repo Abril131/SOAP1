@@ -5,7 +5,5 @@ import com.example.apihex.Ordenes.Infrestructure.datos.responses.OrdenProducResp
 
 public interface IOrdenProducPort {
 
-    OrdenProducResponse CrearOrdenProduc(OrdenProduc ordenProduc);
-
     OrdenProducResponse CrearOrdenProducto(OrdenProduc ordenProductos);
 }

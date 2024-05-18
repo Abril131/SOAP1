@@ -1,12 +1,10 @@
 from flask import Flask
+from flask_cors import CORS
+from src.Productos.Infrestructure.Routes.ProductsRoutes import product_routes
 
 app = Flask(__name__)
-
-
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
-
+app.register_blueprint(product_routes, url_prefix="/products")
+CORS(app)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, port=3001)

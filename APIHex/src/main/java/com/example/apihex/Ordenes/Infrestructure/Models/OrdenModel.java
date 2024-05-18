@@ -10,8 +10,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "ordenes")
-@Getter
-@Setter
+@Getter @Setter
 public class OrdenModel {
     @Id
     private String id;
@@ -25,6 +24,6 @@ public class OrdenModel {
     @Column(nullable = false)
     private String status;
 
-    @OneToMany(mappedBy = "ordenes")
-    private List<OrdenProducModel> produc;
+    @OneToMany(mappedBy = "orden")
+    private List<OrdenProducModel> productos;
 }

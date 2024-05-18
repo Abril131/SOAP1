@@ -8,7 +8,7 @@ product_routes = Blueprint('product_routes', __name__)
 
 repo = ProductsRepository()
 get_controller = GetController(repo)
-delete_controller = DeleteController(repo)
+delete_controller = DeleteController
 create_controller = CreateController(repo)
 
 @product_routes.route("/", methods=["GET"])

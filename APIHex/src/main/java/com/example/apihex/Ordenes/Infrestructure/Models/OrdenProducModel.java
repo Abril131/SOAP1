@@ -8,16 +8,12 @@ import lombok.Setter;
 @Table(name="ordenes_compra")
 @Getter
 @Setter
-
 public class OrdenProducModel {
     @Id
     private String id;
 
     @Column(nullable = false)
-    private String productoId;
-
-    @Column(nullable = false)
-    private String ordenId;
+    private String producto_id;
 
     @Column(nullable = false)
     private float total;
@@ -26,7 +22,7 @@ public class OrdenProducModel {
     private int cantidad;
 
     @ManyToOne
-    @JoinColumn(name="orden_id")
+    @JoinColumn(name = "orden_id")
     private OrdenModel orden;
 
 

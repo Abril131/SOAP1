@@ -24,6 +24,6 @@ public class CreateOrdenProducs {
         ordenProduc.setCantidad(createOrdenProductosRequest.getCantidad());
         ordenProduc.setTotal(createOrdenProductosRequest.getTotal());
         ordenProduc.setOrdenId(id);
-        return repository.CrearOrdenProduc(ordenProduc);
+        return repository.CrearOrdenProducto(ordenProduc);
     }
 }
