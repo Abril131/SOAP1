@@ -27,9 +27,10 @@ public class Update {
         String status = request.getStatus();
         BaseResponse response = repository.ActualizarStatus(id, status);
         if (status.equalsIgnoreCase("Enviado")){
-            List<String> listaRequest = productosReposiyo.findProductosByOrdenId(id).stream().map(this::from).toList();
-            String payload = listaRequest.toString();
-            updateProductos(payload);
+            List<OrdenProducResponse> listaRequest = productosReposiyo.findProductosByOrdenId(id);
+            for (OrdenProducResponse producto : listaRequest){
+                updateProductos(from(producto));
+            }
         }
         return response;
     }

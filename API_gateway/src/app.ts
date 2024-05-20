@@ -16,7 +16,7 @@ const GATEWAY = process.env.SERVICE_NAME;
 
 
 app.use('/api/v1/orders',proxy('http://localhost:3002'));
-app.use('/api/v1/products',proxy('http://localhost:3001'));
+app.use('/api/v1/products',proxy('http://localhost:5000'));
 
 // rutas de auth
 

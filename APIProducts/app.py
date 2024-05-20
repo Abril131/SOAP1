@@ -7,4 +7,4 @@ app.register_blueprint(product_routes, url_prefix="/products")
 CORS(app)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3001)
+    app.run(debug=True, port=5000)
